@@ -1,21 +1,20 @@
 const Mali = require("mali");
-const { SendMessage } = require("./actions/sendMessage")
+const { InfoLog } = require("./actions/infoLog"),
   path = require("path"),
   {LoadProtos} = require('./helpers/loadProto')
 
 require("dotenv").config();
-require("./global");
 
 async function Initialize() {
   console.clear();
   await LoadProtos();
 
   const service = new Mali(
-    path.join(path.resolve(), "src", "protos", "authService.proto"),
-    "AuthService",
+    path.join(path.resolve(), "src", "protos", "logService.proto"),
+    "LogService",
     { defaults: true }
   );
-  service.use({ SendMessage });
+  service.use({ InfoLog });
 
   const address = `${process.env.HOST}:${process.env.PORT}`;
 
