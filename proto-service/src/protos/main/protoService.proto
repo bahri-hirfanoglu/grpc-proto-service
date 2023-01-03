@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service ProtoService {
+    rpc LoadProtos (Request) returns (Response) {}
+}
+
+message Request {
+    string token = 1;
+    repeated Protos protos = 2;
+}
+
+message Response {
+    repeated Files files = 1;
+    string hosts = 2;
+}
+
+message Protos {
+    string name = 1;
+}
+
+message Files {
+    string buffer = 1;
+    string name = 2;
+}

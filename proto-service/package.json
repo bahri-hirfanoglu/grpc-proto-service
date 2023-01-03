@@ -1,0 +1,30 @@
+{
+  "name": "proto-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node .",
+    "watch": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.3",
+    "@grpc/grpc-js": "^1.7.1",
+    "axios": "^1.1.2",
+    "babel-node": "^0.0.1-security",
+    "babel-plugin-wildcard": "^7.0.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.8.1",
+    "grpc-caller": "^0.14.0",
+    "log4js": "^6.7.0",
+    "mali": "^0.47.1",
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
+  }
+}

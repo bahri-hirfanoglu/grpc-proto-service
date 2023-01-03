@@ -1,0 +1,5 @@
+{
+    "plugins": ["wildcard"],
+    "presets": ["@babel/preset-env"]
+}
+  

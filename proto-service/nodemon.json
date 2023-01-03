@@ -1,0 +1,5 @@
+{
+  "exec": "babel-node -r dotenv/config .",
+  "ext": "js, ts, proto",
+  "quiet": true
+}

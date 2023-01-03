@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service AuthService {
+    rpc SendMessage(Request) returns (Response) {}
+}
+
+message Request {
+    string data = 1;
+}
+
+message Response {
+    string status = 1;
+    string message = 2;
+}
