@@ -1,9 +1,9 @@
 {
-  "authService.proto": {
+  "authService": {
     "host": "0.0.0.0",
     "port": "5554"
   },
-  "logService.proto": {
+  "logService": {
     "host": "0.0.0.0",
     "port": "5554"
   }

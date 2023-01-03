@@ -5,8 +5,8 @@ require("dotenv").config({ path: path.join(path.resolve(), ".env") });
 
 //required proto files list
 const protos = [
-  { name: "authService.proto" },
-  { name: "logService.proto" },
+  { name: "authService" },
+  { name: "logService" },
 ];
 
 exports.LoadProtos = async function () {
@@ -78,7 +78,7 @@ exports.LoadProtos = async function () {
         if (Array.isArray(deleteFiles)) {
           deleteFiles.forEach((element) => {
             if (path.extname(element) == ".proto") {
-              if (!protos.find((A) => A.name == element)) {
+              if (!protos.find((A) => `${A.name}.proto` == element)) {
                 fs.unlinkSync(
                   path.join(path.resolve(), "src", "protos", element)
                 );

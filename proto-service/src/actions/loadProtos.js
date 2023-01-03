@@ -16,11 +16,11 @@ exports.LoadProtos = async function (context) {
     let hosts = {};
     protos.forEach((element) => {
       const name = element.name;
-      const filePath = path.join(path.resolve(), "src", "protos", name);
+      const filePath = path.join(path.resolve(), "src", "protos", `${name}.proto`);
       if (fs.existsSync(filePath)) {
         const buffer = fs.readFileSync(filePath, "base64");
         if (hostList[name]) hosts[name] = hostList[name];
-        files.push({ buffer, name });
+        files.push({ buffer, name: `${name}.proto` });
       }
     });
 

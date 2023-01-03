@@ -1,10 +1,12 @@
-const LogService = require("../services/logService"),
-  hosts = require("../protos/main/host.json");
+const LogService = require("../services/logService");
+try {
+  const hosts = require("../protos/main/host.json");
+} catch (ex) {}
 
 exports.SendMessage = async function (context) {
   try {
     const { data } = context.req;
-    const logServiceHost = hosts["logService.proto"];
+    const logServiceHost = hosts["logService"];
     const logServiceInstance = new LogService(
       `${logServiceHost.host}:${logServiceHost.port}`
     );
