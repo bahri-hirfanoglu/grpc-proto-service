@@ -1,10 +1,9 @@
 const Mali = require("mali");
-const { SendMessage } = require("./actions/sendMessage")
+const { SendMessage } = require("./actions/sendMessage"),
   path = require("path"),
   {LoadProtos} = require('./helpers/loadProto')
 
 require("dotenv").config();
-require("./global");
 
 async function Initialize() {
   console.clear();
