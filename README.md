@@ -22,7 +22,7 @@ Extract dependent proto files
 ## Working logic
 
 - Proto files are defined to the proto service.
-- Other services define their dependent services in **helper/loadProto.js**
+- Services define their dependent services in **helper/load Proto.js**.
 - When the service runs, it communicates with the proto service.
 - It receives and saves the proto files and host information of the services it is connected to.
-- This cycle continues every time the application starts. Only updated proto files are re-registered. 
+- This cycle continues every time the application starts. Only updated proto files are re-saved.
